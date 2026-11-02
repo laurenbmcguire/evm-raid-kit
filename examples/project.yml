@@ -1,0 +1,32 @@
+# evmkit project settings. status_date is the data date of plan.csv;
+# override it at run time with: python -m evmkit run --status-date YYYY-MM-DD
+project: ERP Data Platform Rollout (synthetic example)
+currency: USD
+project_start: '2026-03-02'
+status_date: '2026-06-19'
+holidays:
+- '2026-04-03'
+- '2026-05-25'
+- '2026-07-03'
+- '2026-09-07'
+seed: 12
+thresholds:
+  schedule:
+    green_spi_t: 0.95
+    red_spi_t: 0.9
+    green_slip_days: 5
+    red_slip_days: 20
+  cost:
+    green_cpi: 0.95
+    red_cpi: 0.9
+    green_vac_pct: -0.05
+    red_vac_pct: -0.1
+  scope:
+    score_min: 12
+    amber_count: 2
+    red_count: 3
+  risk:
+    high_score: 15
+    red_score: 20
+    red_high_count: 3
+    amber_overdue: 3

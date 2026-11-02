@@ -1,0 +1,21 @@
+id,wbs,name,depends_on,budget,planned_start,planned_finish,percent_complete,actual_cost
+T01,1.1,Project charter and kickoff,,18000,2026-03-02,2026-03-06,100,18944.57
+T02,1.2,Requirements and data inventory,T01,72000,2026-03-09,2026-03-27,100,78920.9
+T03,2.1,Target data architecture,T02,54000,2026-03-30,2026-04-13,100,55714.23
+T04,2.2,Data model and mapping specs,T03,81000,2026-04-14,2026-05-04,100,80682.71
+T05,2.3,Security and access design,T03,40000,2026-04-14,2026-04-27,100,43436.83
+T06,3.1,Cloud landing zone setup,T03,66000,2026-04-14,2026-04-29,100,73404.08
+T07,3.2,Ingestion pipelines: Finance,T04;T06,132000,2026-05-05,2026-06-02,100,141074.9
+T08,3.3,Ingestion pipelines: Supply chain,T04;T06,110000,2026-05-05,2026-05-29,100,122973.22
+T09,3.4,Ingestion pipelines: HR,T04;T06,64000,2026-05-05,2026-05-20,100,71345.98
+T10,3.5,Master data services,T04,78000,2026-05-05,2026-05-26,100,78806.15
+T11,3.6,Data quality rules,T07;T10,52000,2026-06-03,2026-06-16,90,50357.61
+T12,3.7,Semantic layer and reporting marts,T07;T08,96000,2026-06-03,2026-06-23,60,62963.83
+T13,4.1,System integration testing,T05;T09;T11;T12,70000,2026-06-24,2026-07-08,0,0.0
+T14,4.2,Data reconciliation with Finance,T13,44000,2026-07-09,2026-07-20,0,0.0
+T15,4.3,Performance testing,T13,30000,2026-07-09,2026-07-15,0,0.0
+T16,4.4,User acceptance testing,T14,56000,2026-07-21,2026-08-03,0,0.0
+T17,5.1,Training and change management,T12,48000,2026-06-24,2026-07-15,0,0.0
+T18,5.2,Cutover rehearsal,T15;T16,28000,2026-08-04,2026-08-10,0,0.0
+T19,5.3,Production cutover,T17;T18,24000,2026-08-11,2026-08-13,0,0.0
+T20,5.4,Hypercare and handover,T19,42000,2026-08-14,2026-08-27,0,0.0

@@ -1,0 +1,212 @@
+{
+  "date": "2026-11-02",
+  "project": "evm-raid-kit",
+  "health": {
+    "rag": "Amber",
+    "reason": "1 open P0 item(s) (B10); 2 risk(s) scored >= 15 (R1, R3)"
+  },
+  "milestones": [
+    {
+      "id": "M1",
+      "name": "EVM engine",
+      "due": "2026-10-16",
+      "status": "done",
+      "pct_done": 100,
+      "overdue": false,
+      "done_criteria": "PV linear spread, EV, AC from timesheets, SV/CV/SPI/CPI, 3 EAC methods, ETC, VAC, TCPI; formulas tested against hand-computed values"
+    },
+    {
+      "id": "M2",
+      "name": "Earned schedule and CPM",
+      "due": "2026-10-23",
+      "status": "done",
+      "pct_done": 100,
+      "overdue": false,
+      "done_criteria": "ES, SPI(t), IEAC(t) forecast finish; CPM forward/backward pass with total and free float on a working-day calendar; tests pass"
+    },
+    {
+      "id": "M3",
+      "name": "RAID analytics and RAG rules",
+      "due": "2026-10-27",
+      "status": "done",
+      "pct_done": 100,
+      "overdue": false,
+      "done_criteria": "risk scoring, 5x5 heatmap, overdue and aging items, issues by owner; explicit RAG rules for scope, schedule, cost and risk"
+    },
+    {
+      "id": "M4",
+      "name": "Report generator and charts",
+      "due": "2026-10-30",
+      "status": "done",
+      "pct_done": 100,
+      "overdue": false,
+      "done_criteria": "reports/status_report.md one-pager, reports/summary.json and five brand charts produced by python -m evmkit run"
+    },
+    {
+      "id": "M5",
+      "name": "AI PM and CI workflows",
+      "due": "2026-11-02",
+      "status": "done",
+      "pct_done": 100,
+      "overdue": false,
+      "done_criteria": "deterministic STATUS.md and status.json, optional grounded LLM summary, CI matrix and weekly AI PM workflow"
+    },
+    {
+      "id": "M6",
+      "name": "Data quality guards",
+      "due": "2026-11-20",
+      "status": "in_progress",
+      "pct_done": 0,
+      "overdue": false,
+      "done_criteria": "percent-complete validation, timesheet lag check and a baseline change log, each with tests and a section in the report"
+    },
+    {
+      "id": "M7",
+      "name": "Excel and Smartsheet import (planned)",
+      "due": "2026-12-18",
+      "status": "planned",
+      "pct_done": 0,
+      "overdue": false,
+      "done_criteria": "read plan, timesheet and RAID data from .xlsx and Smartsheet CSV exports with column mapping and validation errors"
+    },
+    {
+      "id": "M8",
+      "name": "Power BI template (planned)",
+      "due": "2027-01-29",
+      "status": "planned",
+      "pct_done": 0,
+      "overdue": false,
+      "done_criteria": "tidy long-format export plus a documented Power BI template that reproduces the S-curves, indices and RAID views"
+    }
+  ],
+  "backlog_counts": {
+    "todo": 7,
+    "doing": 1,
+    "done": 9
+  },
+  "risks": [
+    {
+      "id": "R1",
+      "risk": "Inaccurate percent complete inflates EV and hides overruns",
+      "probability": 4,
+      "impact": 4,
+      "owner": "Lauren",
+      "mitigation": "B11 validation rules; define physical progress criteria per task type",
+      "status": "open",
+      "score": 16,
+      "heat": "High"
+    },
+    {
+      "id": "R3",
+      "risk": "Baseline changes without change control mask true variance",
+      "probability": 3,
+      "impact": 5,
+      "owner": "Lauren",
+      "mitigation": "B10 baseline change log; report re-baselines with change-request ids",
+      "status": "open",
+      "score": 15,
+      "heat": "High"
+    },
+    {
+      "id": "R2",
+      "risk": "Timesheet lag understates AC, so CPI looks better than reality",
+      "probability": 3,
+      "impact": 4,
+      "owner": "AI PM",
+      "mitigation": "B12 lag check; accrue estimated cost for missing timesheet weeks",
+      "status": "open",
+      "score": 12,
+      "heat": "Medium"
+    },
+    {
+      "id": "R4",
+      "risk": "Linear PV spread misrepresents front- or back-loaded tasks",
+      "probability": 3,
+      "impact": 3,
+      "owner": "AI PM",
+      "mitigation": "Document the assumption; add optional per-task spread curves after M7",
+      "status": "monitoring",
+      "score": 9,
+      "heat": "Medium"
+    },
+    {
+      "id": "R5",
+      "risk": "Excel and Smartsheet exports vary in columns and date formats",
+      "probability": 3,
+      "impact": 3,
+      "owner": "AI PM",
+      "mitigation": "Column mapping file and strict loader validation with clear errors (M7)",
+      "status": "open",
+      "score": 9,
+      "heat": "Medium"
+    },
+    {
+      "id": "R8",
+      "risk": "LLM summary states facts that are not in the computed JSON",
+      "probability": 2,
+      "impact": 4,
+      "owner": "AI PM",
+      "mitigation": "Prompt restricted to the facts JSON; deterministic fallback; tests never call the network",
+      "status": "monitoring",
+      "score": 8,
+      "heat": "Medium"
+    },
+    {
+      "id": "R6",
+      "risk": "Power BI template drifts from the summary.json schema",
+      "probability": 2,
+      "impact": 3,
+      "owner": "Lauren",
+      "mitigation": "Versioned export schema and a test that checks required fields (M8)",
+      "status": "open",
+      "score": 6,
+      "heat": "Low"
+    },
+    {
+      "id": "R7",
+      "risk": "Synthetic sample data is cleaner than real project data",
+      "probability": 3,
+      "impact": 2,
+      "owner": "Lauren",
+      "mitigation": "State it in the README; loaders reject malformed input instead of guessing",
+      "status": "monitoring",
+      "score": 6,
+      "heat": "Low"
+    }
+  ],
+  "next_actions": [
+    {
+      "id": "B10",
+      "title": "Baseline change log tied to change-request ids",
+      "priority": "P0",
+      "owner": "Lauren",
+      "depends_on": []
+    },
+    {
+      "id": "B15",
+      "title": "Tidy long-format export for BI tools",
+      "priority": "P1",
+      "owner": "AI PM",
+      "depends_on": [
+        "B07"
+      ]
+    },
+    {
+      "id": "B13",
+      "title": "Excel (.xlsx) reader with column mapping",
+      "priority": "P1",
+      "owner": "AI PM",
+      "depends_on": []
+    }
+  ],
+  "data_says": [
+    "EVM at 2026-06-19: CPI 0.93, SPI 0.96; EAC (BAC/CPI) $1.29M vs BAC $1.21M (VAC -7.2%).",
+    "Earned schedule: SPI(t) 0.95 forecasts finish 2026-09-08, +7 working days vs the 2026-08-27 baseline.",
+    "Critical path: 12 of 20 tasks; critical tasks behind plan: T12.",
+    "RAID: 18 open items, 5 overdue; 2 open risk(s) scored >= 15 (top R-01, score 16).",
+    "Report RAG: scope Green, schedule Amber, cost Amber, risk Amber -> overall Amber."
+  ],
+  "decision_log": "2026-11-02: health Amber (1 open P0 item(s) (B10); 2 risk(s) scored >= 15 (R1, R3)); next focus B10 (Baseline change log tied to change-request ids, P0).",
+  "executive_summary": "Project health is Amber: 1 open P0 item(s) (B10); 2 risk(s) scored >= 15 (R1, R3). 5 of 8 milestones are done and the backlog holds 7 todo, 1 in progress and 9 done items. The next three actions are B10 Baseline change log tied to change-request ids, B15 Tidy long-format export for BI tools, B13 Excel (.xlsx) reader with column mapping. The highest project risk is R1 (Inaccurate percent complete inflates EV and hides overruns) with score 16, owned by Lauren. On the sample data the pipeline reports: EVM at 2026-06-19: CPI 0.93, SPI 0.96; EAC (BAC/CPI) $1.29M vs BAC $1.21M (VAC -7.2%). All figures are computed from the repository's synthetic example data.",
+  "executive_summary_source": "deterministic template"
+}

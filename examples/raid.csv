@@ -1,0 +1,24 @@
+id,type,category,description,owner,probability,impact,raised,due,status,closed_date
+R-01,Risk,Schedule,ERP vendor change-data-capture extracts for the general ledger arrive later than planned,Data Lead,4,4,2026-03-22,2026-06-30,In progress,
+R-02,Risk,Technical,"Legacy supplier master data has a higher defect rate than profiled, adding DQ rework",Data Quality Lead,4,3,2026-04-06,2026-07-10,Open,
+R-03,Risk,Resource,Loss of a senior data engineer during build would delay the ingestion pipelines,PMO,2,4,2026-03-12,2026-07-30,Open,
+R-04,Risk,Cost,Cloud consumption above estimate because of unoptimised full reloads,Infra Lead,3,3,2026-04-16,2026-06-10,Open,
+R-05,Risk,Schedule,"UAT window overlaps quarter-end close, limiting Finance tester availability",Test Manager,3,4,2026-05-01,2026-07-20,Open,
+R-06,Risk,Scope,Additional HR analytics reports requested outside the agreed scope,Change Lead,3,3,2026-05-11,2026-07-05,Open,
+R-07,Risk,Schedule,Security accreditation of the production environment takes longer than planned,Security Architect,3,5,2026-04-11,2026-06-25,In progress,
+R-08,Risk,Scope,"Finance reconciliation tolerances not yet agreed, risking disputes at UAT exit",Finance SME,3,4,2026-04-26,2026-06-05,Open,
+R-09,Risk,Technical,Semantic layer query performance at month-end volumes not yet proven,Data Architect,2,4,2026-04-21,2026-08-09,Open,
+R-10,Risk,Cost,Platform licence renewal falls mid-project at a higher list price,Vendor Manager,2,2,2026-03-17,2026-05-01,Closed,2026-04-29
+R-11,Risk,Technical,Integration test environment instability,Infra Lead,3,3,2026-03-27,2026-05-16,Closed,2026-05-21
+I-01,Issue,Schedule,Finance ingestion behind plan: undocumented ledger mappings found during build,Data Lead,5,4,2026-05-29,2026-06-15,In progress,
+I-02,Issue,Resource,Test data masking tool licence not yet procured,PMO,5,3,2026-05-15,2026-06-08,Open,
+I-03,Issue,Technical,Supply chain API rate limits slowed the initial full loads,Integration Lead,5,2,2026-05-07,2026-05-25,Closed,2026-05-24
+I-04,Issue,Cost,Contractor day rates increased mid-project after vendor renegotiation,PMO,5,3,2026-05-21,2026-06-30,Open,
+I-05,Issue,Scope,Two data mapping specifications reopened after sign-off,Data Architect,5,2,2026-06-02,2026-06-22,In progress,
+A-01,Assumption,Resource,Business SMEs are available two days per week through UAT,Change Lead,3,4,2026-03-07,2026-08-19,Open,
+A-02,Assumption,Scope,Legacy ERP configuration stays frozen during the build phase,Data Lead,2,4,2026-03-07,2026-07-30,Open,
+A-03,Assumption,Technical,Enterprise landing zone pattern can be reused without changes,Infra Lead,2,3,2026-03-10,2026-04-21,Closed,2026-04-16
+D-01,Dependency,Schedule,Enterprise IAM team delivers SSO integration before SIT starts,Security Architect,3,4,2026-04-01,2026-06-28,Open,
+D-02,Dependency,Schedule,ERP vendor ships the CDC connector patch for ledger tables,Vendor Manager,4,4,2026-05-03,2026-06-12,Open,
+D-03,Dependency,Technical,Network team opens firewall rules for ingestion endpoints,Infra Lead,3,3,2026-03-30,2026-04-23,Closed,2026-04-21
+D-04,Dependency,Schedule,Finance confirms the quarter-end close calendar for UAT planning,Finance SME,2,3,2026-05-26,2026-07-05,Open,

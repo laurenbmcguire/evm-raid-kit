@@ -1,0 +1,508 @@
+{
+  "project": "ERP Data Platform Rollout (synthetic example)",
+  "currency": "USD",
+  "status_date": "2026-06-19",
+  "data_date": "2026-06-19",
+  "progress_source": "plan.csv percent_complete",
+  "project_start": "2026-03-02",
+  "tasks": 20,
+  "evm": {
+    "bac": 1205000.0,
+    "pv": 850200.0,
+    "ev": 819400.0,
+    "ac": 878625.01,
+    "sv": -30800.0,
+    "cv": -59225.01,
+    "spi": 0.9638,
+    "cpi": 0.9326,
+    "eac_cpi": 1292095.6029,
+    "eac_atypical": 1264225.01,
+    "eac_cpi_spi": 1307637.3338,
+    "etc": 413470.5929,
+    "vac": -87095.6029,
+    "vac_pct": -0.0723,
+    "tcpi_bac": 1.1815,
+    "tcpi_eac": 0.9326,
+    "pct_planned": 0.7056,
+    "pct_complete": 0.68,
+    "pct_spent": 0.7291
+  },
+  "earned_schedule": {
+    "es_days": 74.0,
+    "at_days": 78.0,
+    "planned_duration_days": 126,
+    "spi_t": 0.9487,
+    "sv_t_days": -4.0,
+    "ieac_t_days": 132.8108,
+    "planned_finish": "2026-08-27",
+    "forecast_finish": "2026-09-08",
+    "slip_working_days": 7
+  },
+  "cpm": {
+    "duration_working_days": 126,
+    "critical_path": [
+      "T01",
+      "T02",
+      "T03",
+      "T04",
+      "T07",
+      "T12",
+      "T13",
+      "T14",
+      "T16",
+      "T18",
+      "T19",
+      "T20"
+    ],
+    "critical_count": 12,
+    "tasks_off_network_dates": 0,
+    "critical_tasks_behind": [
+      {
+        "id": "T12",
+        "name": "Semantic layer and reporting marts",
+        "sv": -25600.0,
+        "spi": 0.6923
+      }
+    ],
+    "max_total_float_days": 40
+  },
+  "tasks_behind": [
+    {
+      "id": "T12",
+      "name": "Semantic layer and reporting marts",
+      "sv": -25600.0
+    },
+    {
+      "id": "T11",
+      "name": "Data quality rules",
+      "sv": -5200.0
+    }
+  ],
+  "raid": {
+    "items_total": 23,
+    "open_total": 18,
+    "open_by_type": {
+      "Risk": 9,
+      "Assumption": 2,
+      "Issue": 4,
+      "Dependency": 3
+    },
+    "open_risks_high": 2,
+    "max_open_risk_score": 16,
+    "mean_open_age_days": 58.7,
+    "overdue_count": 5,
+    "top_risks": [
+      {
+        "id": "R-01",
+        "type": "Risk",
+        "category": "Schedule",
+        "description": "ERP vendor change-data-capture extracts for the general ledger arrive later than planned",
+        "owner": "Data Lead",
+        "probability": 4,
+        "impact": 4,
+        "score": 16,
+        "heat": "High",
+        "due": "2026-06-30",
+        "status": "In progress",
+        "age_days": 89,
+        "days_overdue": 0
+      },
+      {
+        "id": "R-07",
+        "type": "Risk",
+        "category": "Schedule",
+        "description": "Security accreditation of the production environment takes longer than planned",
+        "owner": "Security Architect",
+        "probability": 3,
+        "impact": 5,
+        "score": 15,
+        "heat": "High",
+        "due": "2026-06-25",
+        "status": "In progress",
+        "age_days": 69,
+        "days_overdue": 0
+      },
+      {
+        "id": "R-05",
+        "type": "Risk",
+        "category": "Schedule",
+        "description": "UAT window overlaps quarter-end close, limiting Finance tester availability",
+        "owner": "Test Manager",
+        "probability": 3,
+        "impact": 4,
+        "score": 12,
+        "heat": "Medium",
+        "due": "2026-07-20",
+        "status": "Open",
+        "age_days": 49,
+        "days_overdue": 0
+      },
+      {
+        "id": "R-08",
+        "type": "Risk",
+        "category": "Scope",
+        "description": "Finance reconciliation tolerances not yet agreed, risking disputes at UAT exit",
+        "owner": "Finance SME",
+        "probability": 3,
+        "impact": 4,
+        "score": 12,
+        "heat": "Medium",
+        "due": "2026-06-05",
+        "status": "Open",
+        "age_days": 54,
+        "days_overdue": 14
+      },
+      {
+        "id": "R-02",
+        "type": "Risk",
+        "category": "Technical",
+        "description": "Legacy supplier master data has a higher defect rate than profiled, adding DQ rework",
+        "owner": "Data Quality Lead",
+        "probability": 4,
+        "impact": 3,
+        "score": 12,
+        "heat": "Medium",
+        "due": "2026-07-10",
+        "status": "Open",
+        "age_days": 74,
+        "days_overdue": 0
+      }
+    ],
+    "overdue_items": [
+      {
+        "id": "R-08",
+        "type": "Risk",
+        "category": "Scope",
+        "description": "Finance reconciliation tolerances not yet agreed, risking disputes at UAT exit",
+        "owner": "Finance SME",
+        "probability": 3,
+        "impact": 4,
+        "score": 12,
+        "heat": "Medium",
+        "due": "2026-06-05",
+        "status": "Open",
+        "age_days": 54,
+        "days_overdue": 14
+      },
+      {
+        "id": "I-02",
+        "type": "Issue",
+        "category": "Resource",
+        "description": "Test data masking tool licence not yet procured",
+        "owner": "PMO",
+        "probability": 5,
+        "impact": 3,
+        "score": 15,
+        "heat": "High",
+        "due": "2026-06-08",
+        "status": "Open",
+        "age_days": 35,
+        "days_overdue": 11
+      },
+      {
+        "id": "R-04",
+        "type": "Risk",
+        "category": "Cost",
+        "description": "Cloud consumption above estimate because of unoptimised full reloads",
+        "owner": "Infra Lead",
+        "probability": 3,
+        "impact": 3,
+        "score": 9,
+        "heat": "Medium",
+        "due": "2026-06-10",
+        "status": "Open",
+        "age_days": 64,
+        "days_overdue": 9
+      },
+      {
+        "id": "D-02",
+        "type": "Dependency",
+        "category": "Schedule",
+        "description": "ERP vendor ships the CDC connector patch for ledger tables",
+        "owner": "Vendor Manager",
+        "probability": 4,
+        "impact": 4,
+        "score": 16,
+        "heat": "High",
+        "due": "2026-06-12",
+        "status": "Open",
+        "age_days": 47,
+        "days_overdue": 7
+      },
+      {
+        "id": "I-01",
+        "type": "Issue",
+        "category": "Schedule",
+        "description": "Finance ingestion behind plan: undocumented ledger mappings found during build",
+        "owner": "Data Lead",
+        "probability": 5,
+        "impact": 4,
+        "score": 20,
+        "heat": "High",
+        "due": "2026-06-15",
+        "status": "In progress",
+        "age_days": 21,
+        "days_overdue": 4
+      }
+    ],
+    "issues_by_owner": {
+      "PMO": 2,
+      "Data Architect": 1,
+      "Data Lead": 1
+    },
+    "open_by_owner": {
+      "PMO": 3,
+      "Data Lead": 3,
+      "Data Architect": 2,
+      "Change Lead": 2,
+      "Security Architect": 2,
+      "Finance SME": 2,
+      "Infra Lead": 1,
+      "Data Quality Lead": 1,
+      "Test Manager": 1,
+      "Vendor Manager": 1
+    },
+    "heatmap": [
+      [
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        2,
+        1,
+        0
+      ],
+      [
+        0,
+        2,
+        2,
+        1,
+        0
+      ],
+      [
+        0,
+        0,
+        1,
+        0,
+        0
+      ]
+    ],
+    "aging": {
+      "0-14 d": {
+        "Risk": 0,
+        "Assumption": 0,
+        "Issue": 0,
+        "Dependency": 0
+      },
+      "15-30 d": {
+        "Risk": 0,
+        "Assumption": 0,
+        "Issue": 3,
+        "Dependency": 1
+      },
+      "31-60 d": {
+        "Risk": 4,
+        "Assumption": 0,
+        "Issue": 1,
+        "Dependency": 1
+      },
+      "61+ d": {
+        "Risk": 5,
+        "Assumption": 2,
+        "Issue": 0,
+        "Dependency": 1
+      }
+    }
+  },
+  "rag": {
+    "scope": "Green",
+    "schedule": "Amber",
+    "cost": "Amber",
+    "risk": "Amber",
+    "overall": "Amber",
+    "reasons": {
+      "scope": "1 open scope item(s) scored >= 12",
+      "schedule": "SPI(t) 0.95, forecast slip +7 working days",
+      "cost": "CPI 0.93, VAC -7.2% of BAC",
+      "risk": "2 open risk(s) scored >= 15 (max 16), 5 overdue RAID item(s)"
+    }
+  },
+  "reconciliation": {
+    "plan_ac_total": 878625.01,
+    "timesheet_ac_total": 878625.01,
+    "max_task_abs_diff": 0.0
+  },
+  "trend": [
+    {
+      "date": "2026-03-06",
+      "pv": 18000.0,
+      "ev": 18000.0,
+      "ac": 18944.57,
+      "spi": 1.0,
+      "cpi": 0.9501,
+      "spi_t": 1.0
+    },
+    {
+      "date": "2026-03-13",
+      "pv": 42000.0,
+      "ev": 39600.0,
+      "ac": 42762.44,
+      "spi": 0.9429,
+      "cpi": 0.926,
+      "spi_t": 0.95
+    },
+    {
+      "date": "2026-03-20",
+      "pv": 66000.0,
+      "ev": 61200.0,
+      "ac": 68452.26,
+      "spi": 0.9273,
+      "cpi": 0.8941,
+      "spi_t": 0.9333
+    },
+    {
+      "date": "2026-03-27",
+      "pv": 90000.0,
+      "ev": 86400.0,
+      "ac": 92815.59,
+      "spi": 0.96,
+      "cpi": 0.9309,
+      "spi_t": 0.9625
+    },
+    {
+      "date": "2026-04-03",
+      "pv": 111600.0,
+      "ev": 103500.0,
+      "ac": 113957.94,
+      "spi": 0.9274,
+      "cpi": 0.9082,
+      "spi_t": 0.9375
+    },
+    {
+      "date": "2026-04-10",
+      "pv": 138600.0,
+      "ev": 130500.0,
+      "ac": 139472.59,
+      "spi": 0.9416,
+      "cpi": 0.9357,
+      "spi_t": 0.9483
+    },
+    {
+      "date": "2026-04-17",
+      "pv": 203600.0,
+      "ev": 174050.0,
+      "ac": 183189.87,
+      "spi": 0.8549,
+      "cpi": 0.9501,
+      "spi_t": 0.9417
+    },
+    {
+      "date": "2026-04-24",
+      "pv": 278100.0,
+      "ev": 244750.0,
+      "ac": 258447.23,
+      "spi": 0.8801,
+      "cpi": 0.947,
+      "spi_t": 0.9426
+    },
+    {
+      "date": "2026-05-01",
+      "pv": 325600.0,
+      "ev": 308200.0,
+      "ac": 328750.61,
+      "spi": 0.9466,
+      "cpi": 0.9375,
+      "spi_t": 0.9408
+    },
+    {
+      "date": "2026-05-08",
+      "pv": 423977.7778,
+      "ev": 376500.0,
+      "ac": 400520.98,
+      "spi": 0.888,
+      "cpi": 0.94,
+      "spi_t": 0.9583
+    },
+    {
+      "date": "2026-05-15",
+      "pv": 540200.0,
+      "ev": 486000.0,
+      "ac": 515210.97,
+      "spi": 0.8997,
+      "cpi": 0.9433,
+      "spi_t": 0.9568
+    },
+    {
+      "date": "2026-05-22",
+      "pv": 645755.5556,
+      "ev": 589600.0,
+      "ac": 629225.0,
+      "spi": 0.913,
+      "cpi": 0.937,
+      "spi_t": 0.9513
+    },
+    {
+      "date": "2026-05-29",
+      "pv": 701800.0,
+      "ev": 660000.0,
+      "ac": 704233.86,
+      "spi": 0.9404,
+      "cpi": 0.9372,
+      "spi_t": 0.9491
+    },
+    {
+      "date": "2026-06-05",
+      "pv": 749800.0,
+      "ev": 715000.0,
+      "ac": 765303.57,
+      "spi": 0.9536,
+      "cpi": 0.9343,
+      "spi_t": 0.9559
+    },
+    {
+      "date": "2026-06-12",
+      "pv": 807800.0,
+      "ev": 767200.0,
+      "ac": 819640.09,
+      "spi": 0.9497,
+      "cpi": 0.936,
+      "spi_t": 0.9521
+    },
+    {
+      "date": "2026-06-19",
+      "pv": 850200.0,
+      "ev": 819400.0,
+      "ac": 878625.01,
+      "spi": 0.9638,
+      "cpi": 0.9326,
+      "spi_t": 0.9487
+    }
+  ],
+  "decisions": [
+    "**Funding:** forecast overrun of $87.1k (7.2% of BAC; EAC range $1.26M to $1.31M). Decide between releasing contingency and descoping. Finishing on budget needs TCPI 1.18 against a CPI of 0.93 to date, so a controlled re-baseline is the realistic path.",
+    "**Schedule:** accept a forecast finish of 2026-09-08 (+7 working days) or approve recovery on critical-path work behind plan (T12).",
+    "**Risk R-01** (score 16, Data Lead): confirm mitigation funding and date. ERP vendor change-data-capture extracts for the general ledger arrive later than planned.",
+    "**Risk R-07** (score 15, Security Architect): confirm mitigation funding and date. Security accreditation of the production environment takes longer than planned.",
+    "**RAID hygiene:** 5 open item(s) past due; Data Lead, Finance SME, Infra Lead, PMO, Vendor Manager to re-plan or close them before the next report."
+  ],
+  "headline": "Overall AMBER. 68.0% complete against 70.6% planned. CPI 0.93 forecasts $1.29M at completion, $87.1k (7.2%) over the $1.21M budget; earned schedule (SPI(t) 0.95) forecasts finish on 2026-09-08, 7 working days after the 2026-08-27 baseline.",
+  "charts": [
+    "docs/img/s_curves.png",
+    "docs/img/cpi_spi_trend.png",
+    "docs/img/risk_heatmap.png",
+    "docs/img/raid_aging.png",
+    "docs/img/gantt.png"
+  ]
+}

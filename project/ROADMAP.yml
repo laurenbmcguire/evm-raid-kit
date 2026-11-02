@@ -1,0 +1,62 @@
+# Roadmap for the evm-raid-kit repository, managed by the AI PM (python -m evmkit pm).
+project: evm-raid-kit
+milestones:
+  - id: M1
+    name: EVM engine
+    due: 2026-10-16
+    status: done
+    done_criteria: PV linear spread, EV, AC from timesheets, SV/CV/SPI/CPI, 3 EAC methods, ETC, VAC, TCPI; formulas tested against hand-computed values
+  - id: M2
+    name: Earned schedule and CPM
+    due: 2026-10-23
+    status: done
+    done_criteria: ES, SPI(t), IEAC(t) forecast finish; CPM forward/backward pass with total and free float on a working-day calendar; tests pass
+  - id: M3
+    name: RAID analytics and RAG rules
+    due: 2026-10-27
+    status: done
+    done_criteria: risk scoring, 5x5 heatmap, overdue and aging items, issues by owner; explicit RAG rules for scope, schedule, cost and risk
+  - id: M4
+    name: Report generator and charts
+    due: 2026-10-30
+    status: done
+    done_criteria: reports/status_report.md one-pager, reports/summary.json and five brand charts produced by python -m evmkit run
+  - id: M5
+    name: AI PM and CI workflows
+    due: 2026-11-02
+    status: done
+    done_criteria: deterministic STATUS.md and status.json, optional grounded LLM summary, CI matrix and weekly AI PM workflow
+  - id: M6
+    name: Data quality guards
+    due: 2026-11-20
+    status: in_progress
+    done_criteria: percent-complete validation, timesheet lag check and a baseline change log, each with tests and a section in the report
+  - id: M7
+    name: Excel and Smartsheet import (planned)
+    due: 2026-12-18
+    status: planned
+    done_criteria: read plan, timesheet and RAID data from .xlsx and Smartsheet CSV exports with column mapping and validation errors
+  - id: M8
+    name: Power BI template (planned)
+    due: 2027-01-29
+    status: planned
+    done_criteria: tidy long-format export plus a documented Power BI template that reproduces the S-curves, indices and RAID views
+
+backlog:
+  - {id: B01, title: PV linear spread and EV/AC roll-up, priority: P0, status: done, owner: AI PM, milestone: M1, depends_on: []}
+  - {id: B02, title: EAC by three methods plus ETC, VAC and TCPI, priority: P0, status: done, owner: AI PM, milestone: M1, depends_on: [B01]}
+  - {id: B03, title: Earned schedule (ES, SPI(t), forecast finish), priority: P1, status: done, owner: AI PM, milestone: M2, depends_on: [B01]}
+  - {id: B04, title: CPM with float on a working-day calendar, priority: P1, status: done, owner: AI PM, milestone: M2, depends_on: []}
+  - {id: B05, title: RAID scoring, heatmap, aging and overdue analytics, priority: P1, status: done, owner: AI PM, milestone: M3, depends_on: []}
+  - {id: B06, title: Explicit RAG rules for scope, schedule, cost and risk, priority: P1, status: done, owner: Lauren, milestone: M3, depends_on: [B02, B05]}
+  - {id: B07, title: Executive one-page report and summary.json, priority: P0, status: done, owner: AI PM, milestone: M4, depends_on: [B06]}
+  - {id: B08, title: Brand charts (S-curves, indices, heatmap, aging, Gantt), priority: P1, status: done, owner: AI PM, milestone: M4, depends_on: [B07]}
+  - {id: B09, title: AI PM status engine and weekly workflow, priority: P1, status: done, owner: AI PM, milestone: M5, depends_on: [B07]}
+  - {id: B10, title: Baseline change log tied to change-request ids, priority: P0, status: todo, owner: Lauren, milestone: M6, depends_on: []}
+  - {id: B11, title: Percent-complete validation rules (stalled tasks, EV/AC outliers), priority: P1, status: doing, owner: AI PM, milestone: M6, depends_on: [B01]}
+  - {id: B12, title: Timesheet lag check (progress without cost in the latest week), priority: P1, status: todo, owner: AI PM, milestone: M6, depends_on: [B11]}
+  - {id: B13, title: Excel (.xlsx) reader with column mapping, priority: P1, status: todo, owner: AI PM, milestone: M7, depends_on: []}
+  - {id: B14, title: Smartsheet CSV export mapping, priority: P2, status: todo, owner: AI PM, milestone: M7, depends_on: [B13]}
+  - {id: B15, title: Tidy long-format export for BI tools, priority: P1, status: todo, owner: AI PM, milestone: M8, depends_on: [B07]}
+  - {id: B16, title: Power BI template and setup guide, priority: P2, status: todo, owner: Lauren, milestone: M8, depends_on: [B15]}
+  - {id: B17, title: Multi-baseline comparison view, priority: P3, status: todo, owner: AI PM, milestone: M8, depends_on: [B10]}
