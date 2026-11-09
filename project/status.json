@@ -1,5 +1,5 @@
 {
-  "date": "2026-11-03",
+  "date": "2026-11-09",
   "project": "evm-raid-kit",
   "health": {
     "rag": "Amber",
@@ -206,7 +206,7 @@
     "RAID: 18 open items, 5 overdue; 2 open risk(s) scored >= 15 (top R-01, score 16).",
     "Report RAG: scope Green, schedule Amber, cost Amber, risk Amber -> overall Amber."
   ],
-  "decision_log": "2026-11-03: health Amber (1 open P0 item(s) (B10); 2 risk(s) scored >= 15 (R1, R3)); next focus B10 (Baseline change log tied to change-request ids, P0).",
+  "decision_log": "2026-11-09: health Amber (1 open P0 item(s) (B10); 2 risk(s) scored >= 15 (R1, R3)); next focus B10 (Baseline change log tied to change-request ids, P0).",
   "executive_summary": "Project health is Amber: 1 open P0 item(s) (B10); 2 risk(s) scored >= 15 (R1, R3). 5 of 8 milestones are done and the backlog holds 7 todo, 1 in progress and 9 done items. The next three actions are B10 Baseline change log tied to change-request ids, B15 Tidy long-format export for BI tools, B13 Excel (.xlsx) reader with column mapping. The highest project risk is R1 (Inaccurate percent complete inflates EV and hides overruns) with score 16, owned by Lauren. On the sample data the pipeline reports: EVM at 2026-06-19: CPI 0.93, SPI 0.96; EAC (BAC/CPI) $1.29M vs BAC $1.21M (VAC -7.2%). All figures are computed from the repository's synthetic example data.",
   "executive_summary_source": "deterministic template"
 }
